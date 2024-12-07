@@ -37,5 +37,10 @@ public class Car {
         this.automaker = automaker;
     }
 
-    
+    public CarStatus startIgnition(CarKey carKey){
+        if(carKey.getAutomaker() != this.getAutomaker()){
+            return new CarStatus("It is not possible to start the car with this key!");
+        }
+        return new CarStatus("Car started. Running with engine: " + engine);
+    }
 }

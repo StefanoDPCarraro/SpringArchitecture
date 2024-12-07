@@ -37,4 +37,10 @@ public class Engine {
     public void setType(EngineType type) {
         this.type = type;
     }
+    @Override
+    public String toString() {
+        return "Engine [model=" + model + ", horsepower=" + horsepower + ", cilinders=" + cilinders + ", liters="
+                + liters + ", type=" + type + "]";
+    }
+    
 }
