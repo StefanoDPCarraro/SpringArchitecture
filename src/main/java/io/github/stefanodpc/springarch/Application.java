@@ -8,11 +8,11 @@ public class Application {
 
 	public static void main(String[] args) {
 		SpringApplicationBuilder builder = new SpringApplicationBuilder(Application.class);
+		builder.run(args);
 		// ConfigurableApplicationContext applicationContext = builder.context();
 		// var productRepository = applicationContext.getBean("produtoRepository");
 		// ConfigurableEnviroment enviroment = applicationContext.getEnviroment();
-		// String applicationName = enviroment.getProperties("spring.application.name");
-		builder.run(args);
+		// String applicationName = enviroment.getProperties("spring.application.name");		
 	}
 
 }
