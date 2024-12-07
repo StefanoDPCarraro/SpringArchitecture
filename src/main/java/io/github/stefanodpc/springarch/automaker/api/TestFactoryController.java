@@ -16,11 +16,11 @@ import io.github.stefanodpc.springarch.automaker.HondaHRV;
 public class TestFactoryController {
 
     @Autowired
-    private Engine engine;
+    private Engine electricEngine;
     
     @PostMapping
     public CarStatus startCar(@RequestBody CarKey carKey){
-        var car = new HondaHRV(engine);
+        var car = new HondaHRV(electricEngine);
         return car.startIgnition(carKey);
     }
 }

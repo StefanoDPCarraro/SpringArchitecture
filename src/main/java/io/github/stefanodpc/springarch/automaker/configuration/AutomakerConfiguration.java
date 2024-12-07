@@ -8,15 +8,37 @@ import io.github.stefanodpc.springarch.automaker.EngineType;
 
 @Configuration
 public class AutomakerConfiguration {
-    
-    @Bean
-    public Engine engine(){
+    //Not necessary but possible (default = method name)
+    @Bean(name="aspiratedEngine") 
+    public Engine aspiratedEngine(){
         var engine = new Engine();
         engine.setHorsepower(120);
         engine.setCilinders(4);
         engine.setModel("XPTO-0");
         engine.setLiters(2.0);
         engine.setType(EngineType.ASPIRATED);
+        return engine;
+    }
+
+    @Bean
+    public Engine turboEngine(){
+        var engine = new Engine();
+        engine.setHorsepower(180);
+        engine.setCilinders(4);
+        engine.setModel("XPTO-01");
+        engine.setLiters(1.5);
+        engine.setType(EngineType.TURBO);
+        return engine;
+    }
+
+    @Bean
+    public Engine electricEngine(){
+        var engine = new Engine();
+        engine.setHorsepower(110);
+        engine.setCilinders(3);
+        engine.setModel("TH-40");
+        engine.setLiters(1.4);
+        engine.setType(EngineType.ELECTRIC);
         return engine;
     }
 
