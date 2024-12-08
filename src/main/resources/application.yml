@@ -7,3 +7,6 @@ spring:
 app:
     config:
         variable: variable value = X
+        value: 500
+        email: testing@gmail.com
+        password: pass1234
