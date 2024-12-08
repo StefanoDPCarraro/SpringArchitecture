@@ -2,6 +2,7 @@ package io.github.stefanodpc.springarch;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +24,11 @@ import io.github.stefanodpc.springarch.todos.TodoValidator;
 // Request does not holds state.
 // Singleton should not hold state since it never ends.
 
+// @Lazy means the bean will only be instantiated when it is used.
+// May hide some errors that would be reported before runtime if not using lazy
+// @Lazy(false) can also be used to make it false if default = true.
+
+@Lazy
 @Component
 @Scope(BeanDefinition.SCOPE_SINGLETON)
 public class GerenciatedBean {
