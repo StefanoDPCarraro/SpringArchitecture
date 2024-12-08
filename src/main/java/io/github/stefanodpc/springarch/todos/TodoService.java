@@ -21,5 +21,11 @@ public class TodoService {
         return repository.save(newTodo);
     }
 
-    
+    public void updateStatus(TodoEntity todo){
+        repository.save(todo);
+    }
+
+    public TodoEntity getById(Integer id){
+        return repository.findById(id).orElse(null);
+    }
 }
