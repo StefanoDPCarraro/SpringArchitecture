@@ -2,14 +2,17 @@ package io.github.stefanodpc.springarch.automaker.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import io.github.stefanodpc.springarch.automaker.Engine;
 import io.github.stefanodpc.springarch.automaker.EngineType;
 
 @Configuration
 public class AutomakerConfiguration {
-    //Not necessary but possible (default = method name)
+    //Not necessary but possible (default name = method name)
+    //@Primary defines the default bean
     @Bean(name="aspiratedEngine") 
+    @Primary
     public Engine aspiratedEngine(){
         var engine = new Engine();
         engine.setHorsepower(120);

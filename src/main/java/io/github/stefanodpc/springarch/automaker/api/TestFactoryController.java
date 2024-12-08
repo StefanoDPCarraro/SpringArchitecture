@@ -20,7 +20,8 @@ public class TestFactoryController {
     // Alternatively changing the variable name also defines it
 
     @Autowired
-    @Qualifier("electricEngine")
+    //@Qualifier("electricEngine")
+    @Electric
     private Engine engine;
     
     @PostMapping
