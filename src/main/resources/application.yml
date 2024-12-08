@@ -3,3 +3,7 @@ spring:
         name: springarch
     jpa:
         show-sql: true
+
+app:
+    config:
+        variable: variable value = X
